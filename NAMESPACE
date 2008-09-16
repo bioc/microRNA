@@ -1,0 +1,8 @@
+export(
+       "get_selfhyb_subseq",
+       "show_selfhyb_counts",
+       "show_selfhyb_lengths",
+       "seedRegions",
+       "matchSeeds",
+       "RNA2DNA"
+       )

@@ -1,0 +1,10 @@
+Package: microRNA 
+Version: 0.1.8
+Author: R. Gentleman, S. Falcon
+Title: Data and functions for dealing with microRNAs
+Description: Different data resources for microRNAs and some functions 
+  for manipulating them.
+License: The Artistic License, Version 2.0
+Maintainer: Robert Gentleman <rgentlem@fhcrc.org>
+Depends: matchprobes, Rlibstree
+biocViews: Infrastructure, SequenceAnnotation, SequenceMatching
