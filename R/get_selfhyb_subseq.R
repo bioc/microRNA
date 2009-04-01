@@ -22,12 +22,11 @@
 get_selfhyb_subseq = function(seq, minlen, type=c("RNA", "DNA")) {
     type = match.arg(type)
     revcompfun = switch(type,
-      RNA=RNAString,
-      DNA=DNAString,
+      RNA=RNAStringSet,
+      DNA=DNAStringSet,
       stop("type must be RNA or DNA"))
-    rcSeq = lapply(seq, revcompfun)
-    rcSeq = lapply(rcSeq, reverseComplement)
-    rcSeq = unlist(lapply(rcSeq, function(x){as.character(x)}))
+    rcSeq = reverseComplement(revcompfun(seq))
+    rcSeq = as.character(rcSeq)
     ans = mapply(.buildEl, seq, rcSeq, minlen, USE.NAMES=FALSE)
     names(ans) = names(seq)
     ans
