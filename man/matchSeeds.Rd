@@ -35,9 +35,10 @@ seed has an exact match in.
 data(hsSeqs)
 data(s3utr)
 hSeedReg = seedRegions(hsSeqs)
-comphSeed = revcompRNA(hSeedReg)
+comphSeed = lapply(hSeedReg,RNAString)
+comphSeed = lapply(comphSeed,reverseComplement)
+comphSeed = unlist(lapply(comphSeed, function(x){as.character(x)}))
 comph = RNA2DNA(comphSeed)
-names(comph) = names(hsSeqs)
 mx = matchSeeds(comph, s3utr)
 }
 \keyword{ manip }
