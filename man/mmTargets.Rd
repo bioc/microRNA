@@ -1,9 +1,9 @@
 \name{mmTargets}
 \alias{mmTargets}
 \docType{data}
-\title{ Human microRNAs and their target IDs}
+\title{ Mouse microRNAs and their target IDs}
 \description{
- A set of human microRNA names and their corresponding known targets
+ A set of mouse microRNA names and their corresponding known targets
  given as ensembl Trascript IDs.
 }
 \usage{data(mmTargets)}
@@ -14,7 +14,7 @@
  binding site, and the strand orientation (plus or minus).
 }
 \details{
- Each mapping represents a different human microRNA, paired with one
+ Each mapping represents a different mouse microRNA, paired with one
  viable target.  Other information about where the microRNA binds is
  also included.  Some microRNAs have multiple targets and so some
  microRNAs may be represented more than once.
