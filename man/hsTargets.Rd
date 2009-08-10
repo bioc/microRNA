@@ -4,7 +4,7 @@
 \title{ Human microRNAs and their target IDs}
 \description{
  A set of human microRNA names and their corresponding known targets
- given as ensembl Trascript IDs.
+ given as ensembl Transcript IDs.
 }
 \usage{data(hsTargets)}
 \format{

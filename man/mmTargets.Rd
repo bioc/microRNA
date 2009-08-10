@@ -4,7 +4,7 @@
 \title{ Mouse microRNAs and their target IDs}
 \description{
  A set of mouse microRNA names and their corresponding known targets
- given as ensembl Trascript IDs.
+ given as ensembl Transcript IDs.
 }
 \usage{data(mmTargets)}
 \format{
