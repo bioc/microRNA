@@ -32,6 +32,7 @@ seed has an exact match in.
 \author{ R. Gentleman }
 \seealso{\code{\link{seedRegions}}}
 \examples{
+library(Biostrings)
 data(hsSeqs)
 data(s3utr)
 hSeedReg = seedRegions(hsSeqs)
