@@ -54,17 +54,18 @@ show_selfhyb_lengths(L)
 \author{Seth Falcon}
 
 \examples{
-seqs = c(a="UGAGGUAGUAGGUUGUAUAGUU", b="UGAGGUAGUAGGUUGUGUGGUU",
-         c="UGAGGUAGUAGGUUGUAUGGUU")
+if (suppressWarnings(require(Rlibstree, quietly=TRUE))) {
+    seqs = c(a="UGAGGUAGUAGGUUGUAUAGUU", b="UGAGGUAGUAGGUUGUGUGGUU",
+             c="UGAGGUAGUAGGUUGUAUGGUU")
 
-ans = get_selfhyb_subseq(seqs, minlen=3, type="RNA")
-length(ans)
+    ans = get_selfhyb_subseq(seqs, minlen=3, type="RNA")
+    length(ans)
 
-ans[["a"]]
+    ans[["a"]]
 
-show_selfhyb_counts(ans)
-show_selfhyb_lengths(ans)
-
+    show_selfhyb_counts(ans)
+    show_selfhyb_lengths(ans)
+}
 }
 
 \keyword{ manip }

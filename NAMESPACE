@@ -1,9 +1,6 @@
 importMethodsFrom(Biostrings,
                   reverseComplement)
 
-importMethodsFrom(Rlibstree,
-                  SuffixTree, getLongestSubstring)
-
 importFrom(Biostrings,
            DNAStringSet, RNAStringSet)
 

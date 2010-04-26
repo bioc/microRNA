@@ -1,11 +1,12 @@
 Package: microRNA 
-Version: 1.6.0
+Version: 1.6.1
 Author: R. Gentleman, S. Falcon
 Title: Data and functions for dealing with microRNAs
 Description: Different data resources for microRNAs and some functions 
   for manipulating them.
 License: Artistic-2.0
 Maintainer: Chao-Jen Wong <cwon2@fhcrc.org>
-Imports: Biostrings (>= 2.11.32), Rlibstree
+Imports: Biostrings (>= 2.11.32)
 Suggests: Biostrings (>= 2.11.32)
+Enhances: Rlibstree
 biocViews: Infrastructure, SequenceAnnotation, SequenceMatching
