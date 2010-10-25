@@ -25,7 +25,7 @@ hsMat = as.matrix(hsMat)
 ## hsMap = hsMat[,12]
 ## names(hsMap) = hsMat[,2]
 ##library(Biobase)
-## hsTargets = l2e(as.list(hsMap))
+## hsTargets = list2env(as.list(hsMap))
 ## hsTargets = hsMap
 
 hsTargets = data.frame(name = hsMat[,"SEQ"], target = hsMat[,"TRANSCRIPT_ID"], chrom = hsMat[,"CHR"], start = hsMat[,"START"], end = hsMat[,"END"], strand = hsMat[,"STRAND"])
@@ -45,7 +45,7 @@ mmMat = as.matrix(mmMat)
 ## mmMap = list()
 ## mmMap = mmMat[,12]
 ## names(mmMap) = mmMat[,2]
-## ## mmTargets = l2e(as.list(mmMap))
+## ## mmTargets = list2env(as.list(mmMap))
 ## mmTargets = mmMap
 
 mmTargets = data.frame(name = mmMat[,"SEQ"], target = mmMat[,"TRANSCRIPT_ID"], chrom = mmMat[,"CHR"], start = mmMat[,"START"], end = mmMat[,"END"], strand = mmMat[,"STRAND"])
