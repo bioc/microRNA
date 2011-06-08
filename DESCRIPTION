@@ -5,7 +5,7 @@ Title: Data and functions for dealing with microRNAs
 Description: Different data resources for microRNAs and some functions 
   for manipulating them.
 License: Artistic-2.0
-Maintainer: Chao-Jen Wong <cwon2@fhcrc.org>
+Maintainer: "James F. Reid" <james.reid@ifom-ieo-campus.it>
 Imports: Biostrings (>= 2.11.32)
 Suggests: Biostrings (>= 2.11.32)
 Enhances: Rlibstree
