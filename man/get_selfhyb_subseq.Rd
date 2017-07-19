@@ -27,9 +27,7 @@ show_selfhyb_lengths(L)
 
 \details{
   \code{get_selfhyb_subseq} finds the longest self-hybridizing
-  subsequences of the specified minimum length.  It does this using
-  suffix trees and the \code{getLongestSubstring} function provided by
-  the Rlibstree package.
+  subsequences of the specified minimum length.
 
   These are defined to be the longest string that is found in both
   the input sequence, \code{seq}, and in its reverse complement.
@@ -54,18 +52,16 @@ show_selfhyb_lengths(L)
 \author{Seth Falcon}
 
 \examples{
-if (suppressWarnings(require(Rlibstree, quietly=TRUE))) {
-    seqs = c(a="UGAGGUAGUAGGUUGUAUAGUU", b="UGAGGUAGUAGGUUGUGUGGUU",
-             c="UGAGGUAGUAGGUUGUAUGGUU")
+seqs = c(a="UGAGGUAGUAGGUUGUAUAGUU", b="UGAGGUAGUAGGUUGUGUGGUU",
+         c="UGAGGUAGUAGGUUGUAUGGUU")
 
-    ans = get_selfhyb_subseq(seqs, minlen=3, type="RNA")
-    length(ans)
+ans = get_selfhyb_subseq(seqs, minlen=3, type="RNA")
+length(ans)
 
-    ans[["a"]]
+ans[["a"]]
 
-    show_selfhyb_counts(ans)
-    show_selfhyb_lengths(ans)
-}
+show_selfhyb_counts(ans)
+show_selfhyb_lengths(ans)
 }
 
 \keyword{ manip }

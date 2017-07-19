@@ -1,13 +1,9 @@
 .buildEl = function(s, r, minlen) {
     both = c(s, r)
     slen = nchar(s, type="chars")
-    pkg = "Rlibstree"
-    library(pkg, character.only=TRUE)
-    autoseqs = Rlibstree::getLongestSubstring(Rlibstree::SuffixTree(both),
-                                   repeated=FALSE,
-                                   range=c(minlen, 0))
-    if (is.null(autoseqs))
-      return(list())
+    autoseqs = .Call(.longest_common_substring, both)
+    if (all(nchar(autoseqs) < minlen))
+        return(list())
     names(autoseqs) = autoseqs
     selfhybs = lapply(autoseqs,
       function(x) {
@@ -23,10 +19,6 @@
 }
 
 get_selfhyb_subseq = function(seq, minlen, type=c("RNA", "DNA")) {
-    pkg = "Rlibstree"
-    suppressWarnings(require(pkg, character.only=TRUE, quietly=TRUE)) ||
-        stop("you need to install the 'Rlibstree' package in order to\n",
-             "  use get_selfhyb_subseq()")
     type = match.arg(type)
     revcompfun = switch(type,
       RNA=RNAStringSet,
