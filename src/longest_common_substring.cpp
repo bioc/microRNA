@@ -35,7 +35,10 @@ SEXP longest_common_substring(SEXP x_sexp)
     size_t tot_len = 0;
     std::vector<int> len(n, 0);
     for (R_len_t i = 0; i < n; ++i) {
-        tot_len += Rf_length(STRING_ELT(x_sexp, i)) + 1; // null-terminate
+        SEXP elt = STRING_ELT(x_sexp, i);
+        if (NA_STRING == elt)
+            Rf_error("'x' must not contain NA");
+        tot_len += Rf_length(elt) + 1; // null-terminate
         len[i] = tot_len;
     }
 
