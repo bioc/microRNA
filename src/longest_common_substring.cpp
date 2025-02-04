@@ -84,7 +84,7 @@ SEXP longest_common_substring(SEXP x_sexp)
 
     SEXP result = PROTECT(Rf_allocVector(STRSXP, found.size()));
     for (size_t i = 0; i < found.size(); ++i)
-        SET_STRING_ELT(result, i, mkCharLen(found[i], lcs_len));
+        SET_STRING_ELT(result, i, Rf_mkCharLen(found[i], lcs_len));
 
     UNPROTECT(1);
     return result;
