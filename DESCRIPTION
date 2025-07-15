@@ -5,7 +5,7 @@ Title: Data and functions for dealing with microRNAs
 Description: Different data resources for microRNAs and some functions
         for manipulating them.
 License: Artistic-2.0
-Maintainer: "Michael Lawrence" <michafla@gene.com>
+Maintainer: "Michael Lawrence" <lawremi@gmail.com>
 Imports: Biostrings (>= 2.11.32)
 Depends: R (>= 2.10)
 biocViews: Infrastructure, GenomeAnnotation, SequenceMatching
